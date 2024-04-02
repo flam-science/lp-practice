@@ -1,1 +1,249 @@
 @charset "utf-8";
+
+/* -------------共通------------- */
+/* コンテンツ幅 */
+.inner{
+    width: 1100px;
+    margin: 0 auto;
+}
+
+/* コンテンツのタイトル */
+.content-title{
+    font-size: 40px;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+.title-skill,.title-plan{
+    padding-top: 50px;
+}
+
+/* -------------header------------- */
+
+    /* header背景白 */
+.header{
+    background: #fff;
+}
+
+    /* header内要素の両端横並びかつ上下中央揃え */
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    /* ロゴ */
+.header-logo{
+    color: #777;
+    padding: 15px 0px;
+}
+
+    /* Contactのボタン */
+.btn-contact{
+    background-color: #6ba7eb;
+    font-size: 12px;
+    padding: 12px 14px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s;
+}
+
+.btn-contact:hover{
+    color: #333;
+    transition: all 0.3s;
+}
+
+
+/* -------------メインコンテンツ------------- */
+
+/* キービジュアル */
+.key-visual{
+    /* 画像の指定 */
+    background-image: url(../img/keyvisual/keyvisual.jpg);
+    /* 画面を覆うように */
+    background-size: cover;
+    /* 画像の位置指定 */
+    background-position: center;
+}
+
+/* キービジュアル内メインタイトル */
+.main-text{
+    /* メインタイトルの上下余白とテキスト中央寄せ */
+    padding: 400px 0px;
+    text-align: center;
+}
+
+    /* メインタイトル */
+.main-text h1{
+    font-size: 65px;
+    font-weight: 700;
+    color: #6ba7eb;
+}
+
+.main-text h2{
+    font-size: 40px;
+    font-weight: 700;
+    color: #ffffff;
+    padding-top: 30px;
+}
+
+/* -------------section work------------- */
+/* work共通 */
+.work{
+    background-color: #e3f2fd;
+    padding-top: 50px;
+}
+
+    /* work内要素の両端横並び */
+.work-contents{
+    display: flex;
+    justify-content: space-between;
+}
+
+    /* PCのサイズ指定 */
+.image-pc{
+    width: 250px;
+}
+
+.content-pc{
+    width: 40%;
+}
+
+    /* work-text内テキスト中央寄せ */
+.work-text{
+    text-align: center;
+    width: 60%;
+}
+
+    /* title上部padding */
+.work-space{
+    padding-top: 20px;
+}
+
+    /* workコンテンツテキスト */
+.content-text{
+    font-size: 15px;
+    line-height: 18px;
+    /* 文章の自動で折り返し */
+    word-break: break-all;
+    padding-top: 35px;
+}
+
+
+/* -------------section skill------------- */
+    /* 画像を横並びかつ折り返し */
+.skill-images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+    /* 画像サイズと余白の指定 */
+.skill-images img{
+    width: 300px;
+    margin: 50px;
+    opacity: 0.7;
+}
+.skill-images img:hover{
+    opacity: 1;
+}
+
+    /* 格段の画像右側の余白削除 */
+.skill-images img:nth-child(3n) {
+    margin-right: -50px;
+}
+
+    /* 格段の画像左側の余白削除 */
+.skill-images img:nth-child(3n+1) {
+    margin-left: -50px;
+}
+
+.skill{
+    padding-bottom: 70px;
+}
+
+/* -------------section plan------------- */
+    /* plan共通 */
+.plan{
+    background-color: #d0dfea;
+    padding-bottom: 50px;
+}
+
+    /* タイトル上部余白 */
+.title-plan{
+    margin-bottom: 50px;
+}
+
+    /* テーブルの基本設定 */
+.plan-table{
+    font-size: 16px;
+    background-color: #f9f9f9;
+    line-height: 26px;
+    text-align: center;
+    width: 100%;
+    /* セルを等間隔 */
+    table-layout: fixed;
+}
+
+.plan-table th,.plan-table td{
+    padding: 10px;
+}
+
+    /* テーブルの見出し設定 */
+.plan-table thead{
+    font-size: 16px;
+    background-color: #6ba7eb;
+}
+
+    /* テーブルの偶数行設定 */
+.plan-table tr:nth-child(2n){
+    background-color: #e0efff;
+}
+
+    /* テーブル内の境界線設定 */
+.plan-table thead th:nth-child(n+2){
+    border-left: 2px solid #fff;
+}
+.plan-table tbody td{
+    border-left: 2px solid #fff;
+}
+
+
+/* -------------section sns------------- */
+.sns{
+    background-color: #e3f2fd;
+}
+
+    /* アイコンを横並び */
+.icons ul{
+    display: flex;
+    padding: 200px 0px;
+    justify-content: center;
+}
+
+    /* アイコンのサイズや色の指定 */
+.facebook,.dribbble,.twitter,.envelope{
+    text-decoration: none;
+    width: 185px;
+    color: #8c8c8c;
+    overflow: hidden;
+    font-size: 40px;
+    margin: 25px 0px;
+    text-align: center;
+    transition: all 0.5s;
+}
+.facebook:hover,.dribbble:hover,.twitter:hover,.envelope:hover{
+    color: #fff;
+    transition: all 0.5s;
+}
+
+/* -------------footer------------- */
+.footer{
+    background-color: #cfd8bc;
+}
+
+.copy-right{
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    padding: 20px 0px 25px 0px;
+    text-align: right;
+}
