@@ -3,7 +3,7 @@
 /* -------------共通------------- */
 /* コンテンツ幅 */
 .inner{
-    width: 1100px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -53,6 +53,11 @@
     transition: all 0.3s;
 }
 
+
+    /* ハンバーガーメニュー非表示 */
+.hamburger-menu{
+    visibility: hidden;
+}
 
 /* -------------メインコンテンツ------------- */
 
@@ -238,7 +243,7 @@
 
 /* -------------footer------------- */
 .footer{
-    background-color: #cfd8bc;
+    background-color: #cfd8dc;
 }
 
 .copy-right{
@@ -246,4 +251,152 @@
     letter-spacing: 0.5px;
     padding: 20px 0px 25px 0px;
     text-align: right;
+}
+
+/* -------------レスポンシブ TAB-------------  */
+@media screen and (max-width: 1199px){
+/* -------------共通------------- */
+/* コンテンツ幅 */
+.inner{
+    max-width: 97%;
+}
+
+/* -------------メインコンテンツ------------- */
+/* キービジュアル内メインタイトル */
+.main-text{
+    padding: 250px 0px;
+}
+
+/* -------------section work------------- */
+/* work内要素の縦並びかつ中央揃え */
+.work-contents{
+    flex-direction: column;
+    text-align: center;
+}
+
+/* PCのサイズ指定 */
+.image-pc{
+    width: 250px;
+}
+
+/* PCブロックのサイズ指定 */
+.content-pc{
+    width: 100%;
+}
+
+/* work-text内テキスト中央寄せ */
+.work-text{
+    text-align: center;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+/* -------------section skill------------- */
+/* 画像を縦並び */
+.skill-images{
+    flex-direction: column;
+    padding-top: 50px;
+    align-items: center;
+}
+
+/* 画像サイズと余白の指定 */
+.skill-images img{
+    margin: 0px;
+}
+
+/* 格段の画像右側の余白削除 */
+.skill-images img:nth-child(3n) {
+    margin-right: 0px;
+    margin-bottom: 80px;
+}
+
+/* 格段の画像左側の余白削除 */
+.skill-images img:nth-child(3n+1) {
+    margin-left: 0px;
+}
+
+/* 下部余白無し */
+.skill{
+    padding-bottom: 0px;
+}
+}
+
+
+
+/* -------------レスポンシブ SP-------------  */
+@media screen and (max-width: 767px){
+
+/* -------------header------------- */
+
+.btn-contact{
+    display: none;
+}
+
+/* ハンバーガーメニュー */
+.hamburger-menu {
+    visibility: visible;
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+    border: 2px solid #dddddd;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #dddddd;
+}
+
+.hamburger-menu span {
+    width: 60%;
+    height: 2px;
+    background-color: #dddddd;
+    transition: transform 0.3s ease;
+}
+
+
+/* -------------メインコンテンツ------------- */
+
+/* キービジュアル */
+/* メインタイトル */
+.main-text h1{
+    font-size: 40px;
+}
+.main-text h2{
+    font-size: 30px;
+}
+    
+/* -------------section plan------------- */
+/* thの文字サイズ */
+.table-head th,.table-body th{
+    font-size: 14px;
+    line-height: 22px;
+}
+
+/* tdの文字サイズ */
+.table-body td{
+    font-size: 12px;
+}
+
+/* -------------section sns------------- */
+/* アイコンを横並び */
+.icons ul{
+    flex-direction: column;
+    padding: 50px 0px;
+    align-items: center;
+}
+
+/* セクションの左右余白 */
+.icons{
+    padding: 0 15px;
+}
+
+/* アイコン同士の間隔 */
+.icons ul{
+    width: 100%;
+    padding: 50px 0px;
+}
+
+
 }
